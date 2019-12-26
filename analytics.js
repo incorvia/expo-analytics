@@ -31,7 +31,7 @@ export default class Analytics {
     constructor(propertyId, additionalParameters = {}, options = defaultOptions){
         this.propertyId = propertyId;
         this.options = options;
-        this.clientId = Constants.deviceId;
+        this.clientId = Constants.installationId;
 
         this.promiseGetWebViewUserAgentAsync = getWebViewUserAgent(options)
             .then(userAgent => {
